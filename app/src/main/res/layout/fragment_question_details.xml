@@ -43,6 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/question_text" />
 
     <RadioGroup
+        android:id="@+id/answer_radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
