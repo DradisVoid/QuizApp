@@ -8,4 +8,7 @@
     <string name="true_button">True</string>
     <string name="false_button">False</string>
     <string name="done">Done</string>
+    <string name="question_list_label">Questions</string>
+    <string name="new_question">New Question</string>
+    <string name="delete_question">Delete</string>
 </resources>
