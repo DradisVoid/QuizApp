@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class QuizModeActivity extends FragmentActivity implements QuizModeFragment.Callbacks {
@@ -20,6 +21,9 @@ public class QuizModeActivity extends FragmentActivity implements QuizModeFragme
 
     /** Current score */
     private int mScore = 0;
+
+    /** DecimalFormat for percentages */
+    private static DecimalFormat df = new DecimalFormat("0.00");
 
     /**
      * If answer was correct, increase score
@@ -61,6 +65,12 @@ public class QuizModeActivity extends FragmentActivity implements QuizModeFragme
         String dialogButton;
         if (mViewPager.getCurrentItem() == mQuestions.size() - 1) {
             dialogButton = "Finish";
+
+            // Add final percentage
+            double percentageScore = ((double) mScore) / mQuestions.size();
+
+            dialogMessage = dialogMessage + "\n\nFinal Percentage: " +
+                    df.format(percentageScore * 100.0) + " %";
         } else {
             dialogButton = "Next Question";
         }
