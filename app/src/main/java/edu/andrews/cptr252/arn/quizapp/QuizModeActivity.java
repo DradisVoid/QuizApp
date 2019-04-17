@@ -43,7 +43,9 @@ public class QuizModeActivity extends FragmentActivity implements QuizModeFragme
     }
 
     /**
-     * Show the correct answer and current score
+     * Show the user if their answer was correct.
+     * Show the current score and progress
+     * Give buttons to continue or quit
      * @param wasAnswerCorrect Was the user's answer correct
      */
     private void showCurrentScore(boolean wasAnswerCorrect) {
@@ -61,16 +63,19 @@ public class QuizModeActivity extends FragmentActivity implements QuizModeFragme
                 "\nCurrent Score: " + mScore + " / " + mQuestions.size() +
                 "\n\nProgress: " + (mViewPager.getCurrentItem() + 1) + " / " + mQuestions.size();
 
-        // Message to display on button (Next Question or Finish)
-        String dialogButton;
+        // Show final percentage if last question
         if (mViewPager.getCurrentItem() == mQuestions.size() - 1) {
-            dialogButton = "Finish";
-
             // Add final percentage
             double percentageScore = ((double) mScore) / mQuestions.size();
 
             dialogMessage = dialogMessage + "\n\nFinal Percentage: " +
                     df.format(percentageScore * 100.0) + " %";
+        }
+
+        // Message to display on button (Next Question or Finish)
+        String dialogButton;
+        if (mViewPager.getCurrentItem() == mQuestions.size() - 1) {
+            dialogButton = "Finish";
         } else {
             dialogButton = "Next Question";
         }
