@@ -51,10 +51,11 @@ public class QuizModeActivity extends FragmentActivity implements QuizModeFragme
             dialogTitle = "Incorrect";
         }
 
-        // Message to display with correct answer and score
+        // Message to display with correct answer, score, and progress
         String dialogMessage = "Correct answer: " +
                 (mQuestions.get(mViewPager.getCurrentItem()).getAnswer() ? "True" : "False") +
-                "\nCurrent Score: " + mScore;
+                "\nCurrent Score: " + mScore + " / " + mQuestions.size() +
+                "\n\nProgress: " + (mViewPager.getCurrentItem() + 1) + " / " + mQuestions.size();
 
         // Message to display on button (Next Question or Finish)
         String dialogButton;
