@@ -57,11 +57,19 @@ public class QuestionListFragment extends ListFragment {
             // set the question text for the question in the view
             TextView questionTextView =
                     convertView.findViewById(R.id.question_list_item_textView);
-            questionTextView.setText(question.getQuestion());
+            if (question.getQuestion() == null) {
+                questionTextView.setText(R.string.no_question_found);
+            } else {
+                questionTextView.setText(question.getQuestion());
+            }
             // set the answer for the question in the view
             TextView answerTextView =
                     convertView.findViewById(R.id.question_list_item_answerTextView);
-            answerTextView.setText(question.getAnswer() ? "True" : "False");
+            if (question.getQuestion() == null) {
+                answerTextView.setText(R.string.no_answer_found);
+            } else {
+                answerTextView.setText(question.getAnswer() ? "True" : "False");
+            }
 
             return convertView;
         }

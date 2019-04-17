@@ -11,4 +11,6 @@
     <string name="question_list_label">Questions</string>
     <string name="new_question">New Question</string>
     <string name="delete_question">Delete</string>
+    <string name="no_question_found">{No Question Found}</string>
+    <string name="no_answer_found">{No Answer Found}</string>
 </resources>
