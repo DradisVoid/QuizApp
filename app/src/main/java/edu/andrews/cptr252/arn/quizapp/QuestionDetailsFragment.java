@@ -38,7 +38,7 @@ public class QuestionDetailsFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /** Required interface to be implemented inhosting activities */
+    /** Required interface to be implemented in hosting activities */
     public interface Callbacks {
         void onQuestionUpdated(Question question);
     }

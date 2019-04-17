@@ -57,7 +57,7 @@ public class QuestionDetailsActivity extends FragmentActivity implements Questio
         // Get the intent sent to this activity from the QuestionListFragment
         UUID questionId = (UUID)getIntent().getSerializableExtra(QuestionDetailsFragment.EXTRA_QUESTION_ID);
 
-        // Search through the list of bugs until we find the bug with the same
+        // Search through the list of questions until we find the question with the same
         // id as the one from the intent
         for (int i = 0; i < mQuestions.size(); i++) {
             if (mQuestions.get(i).getId().equals(questionId)) {

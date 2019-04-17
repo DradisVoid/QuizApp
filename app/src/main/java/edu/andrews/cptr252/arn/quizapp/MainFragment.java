@@ -32,7 +32,7 @@ public class MainFragment extends Fragment {
         startQuizButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startQuizIntent = new Intent(getActivity(), QuizModeFragment.class);
+                Intent startQuizIntent = new Intent(getActivity(), QuizModeActivity.class);
                 startActivity(startQuizIntent);
             }
         });
