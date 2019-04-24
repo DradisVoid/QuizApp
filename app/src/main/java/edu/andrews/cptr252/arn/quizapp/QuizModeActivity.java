@@ -130,6 +130,11 @@ public class QuizModeActivity extends FragmentActivity implements QuizModeFragme
         // get the list of questions
         mQuestions = QuestionList.getInstance(this).getQuestions();
 
+        if (mQuestions.size() == 0) {
+            Toast.makeText(this, "No questions found", Toast.LENGTH_LONG).show();
+            finish();
+        }
+
         FragmentManager fm = getSupportFragmentManager();
         mViewPager.setAdapter(new FragmentPagerAdapter(fm) {
             // Create a new QuizModeFragment for question at given position in list
