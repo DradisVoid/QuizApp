@@ -25,7 +25,7 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // execute SQL command to create a new bug database
+        // execute SQL command to create a new question database
         db.execSQL("create table " + QuestionTable.NAME + "(" +
                 " _id integer primary key autoincrement," +
                 QuestionTable.Cols.UUID + ", " +

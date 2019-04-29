@@ -41,7 +41,7 @@ public class QuestionListFragment extends ListFragment {
          * @param position Position of view in the list
          * @param convertView Existing view that can still be used
          * @param parent THe layout that contains the views generated
-         * @return View containing bug information
+         * @return View containing question information
          */
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
@@ -194,7 +194,7 @@ public class QuestionListFragment extends ListFragment {
                         // If it is selected delete the question
                         for (int i = mAdapter.getCount() - 1; i >= 0; i--) {
                             if (getListView().isItemChecked(i)) {
-                                // Bug has been selected. Delete it
+                                // Question has been selected. Delete it
                                 questionList.deleteQuestion(mAdapter.getItem(i));
                             }
                         }

@@ -1,7 +1,7 @@
 package edu.andrews.cptr252.arn.quizapp.database;
 
 /**
- * Define schema for bug database
+ * Define schema for question database
  */
 public class QuestionDbSchema {
     public static final class QuestionTable {
